@@ -48,6 +48,4 @@ App para simular a rentabilidade dos investimentos em renda fixa
     }
     ```
 
-- **Simulação** 
-
-https://easynvestsimulatorcalcapi.azurewebsites.net/calculator/simulate?investedAmount=1000.0&index=CDI&rate=94.5&isTaxFree=false&maturityDate=2017-12-31
+- **Simulação**: https://easynvestsimulatorcalcapi.azurewebsites.net/calculator/simulate?investedAmount=1000.0&index=CDI&rate=94.5&isTaxFree=false&maturityDate=2017-12-31
