@@ -52,5 +52,5 @@ App para simular a rentabilidade dos investimentos em renda fixa
 
 ## Licença
 
-[Licença](LICENSE)
+* [Licença](LICENSE)
 
