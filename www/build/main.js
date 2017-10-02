@@ -87,12 +87,11 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"C:\Users\joao\Desktop\Simulador Renda Fixa\simulador-rendafixa-app\src\pages\home\home.html"*/'<ion-header no-border>\n  <ion-navbar transparent>\n  </ion-navbar>\n</ion-header>\n<ion-content class="primary-font">\n  <div class="container">\n\n	  <ion-label>Quanto você gostaria de aplicar?</ion-label>\n      <ion-item>\n        <ion-input [(ngModel)]="valor"\n                   type="number"\n                   placeholder="Digite o valor"\n                   clearInput clearOnEdit="false">\n        </ion-input>\n      </ion-item>\n\n	  <ion-label>Qual a data de vencimento do papel?</ion-label>\n      <ion-item>\n        <ion-input [(ngModel)]="data"\n                   type="date"\n                   placeholder=""\n                   clearInput clearOnEdit="false">\n        </ion-input>\n      </ion-item>\n\n	  <ion-label>Qual o percentual do CDI do papel?</ion-label>\n      <ion-item>\n        <ion-input [(ngModel)]="cdi"\n                   type="number"\n                   placeholder="Digite o percentual"\n                   clearInput clearOnEdit="false">\n        </ion-input>\n      </ion-item>\n\n    <button ion-button icon-left block outline color="light" class="button" (click)="simular(valor, data, cdi)"><ion-icon name="logo-usd"></ion-icon>Simular</button>\n\n  </div>\n\n\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\joao\Desktop\Simulador Renda Fixa\simulador-rendafixa-app\src\pages\home\home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"C:\Users\joao\Desktop\Simulador Renda Fixa\simulador-rendafixa-app\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title text-center>Renda Fixa</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content class="primary-font">\n  <div class="container">\n\n	  <ion-label>Quanto você gostaria de aplicar?</ion-label>\n      <ion-item>\n        <ion-input [(ngModel)]="valor"\n                   type="number"\n                   placeholder="Digite o valor"\n                   clearInput clearOnEdit="false">\n        </ion-input>\n      </ion-item>\n\n	  <ion-label>Qual a data de vencimento do papel?</ion-label>\n      <ion-item>\n        <ion-input [(ngModel)]="data"\n                   type="date"\n                   placeholder=""\n                   clearInput clearOnEdit="false">\n        </ion-input>\n      </ion-item>\n\n	  <ion-label>Qual o percentual do CDI do papel?</ion-label>\n      <ion-item>\n        <ion-input [(ngModel)]="cdi"\n                   type="number"\n                   placeholder="Digite o percentual"\n                   clearInput clearOnEdit="false">\n        </ion-input>\n      </ion-item>\n\n    <button ion-button icon-left block outline color="light" class="button" (click)="simular(valor, data, cdi)"><ion-icon name="logo-usd"></ion-icon>Simular</button>\n\n  </div>\n\n\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\joao\Desktop\Simulador Renda Fixa\simulador-rendafixa-app\src\pages\home\home.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__providers_api_api__["a" /* ApiProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_api_api__["a" /* ApiProvider */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* LoadingController */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_api_api__["a" /* ApiProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* LoadingController */]])
 ], HomePage);
 
-var _a, _b, _c;
 //# sourceMappingURL=home.js.map
 
 /***/ }),
@@ -151,9 +150,10 @@ var ApiProvider = (function () {
 }());
 ApiProvider = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
 ], ApiProvider);
 
+var _a;
 //# sourceMappingURL=api.js.map
 
 /***/ }),
