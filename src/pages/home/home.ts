@@ -5,8 +5,6 @@ import 'rxjs/add/operator/map';
 import { LoadingController } from 'ionic-angular';
 
 import { ApiProvider } from '../../providers/api/api'
-import { SimulacaoPage } from '../simulacao/simulacao'
-
 
 
 @Component({
