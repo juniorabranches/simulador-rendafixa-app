@@ -5,7 +5,7 @@
 <ion-content class="primary-font">
   <div class="container">
 
-	  <ion-label>Quanto você gostaria de aplicar?</ion-label>
+	  <ion-label>Quanto vocÃª gostaria de aplicar?</ion-label>
       <ion-item>
         <ion-input [(ngModel)]="valor"
                    type="number"
@@ -32,7 +32,7 @@
         </ion-input>
       </ion-item>
 
-    <button ion-button icon-left block outline color="light" class="button" (click)="simular()">Simular</button>
+    <button ion-button icon-left block outline color="light" class="button" (click)="simular(valor, data, cdi)">Simular</button>
 
   </div>
 
