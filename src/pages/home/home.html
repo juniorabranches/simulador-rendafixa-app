@@ -1,0 +1,41 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+  </ion-navbar>
+</ion-header>
+<ion-content class="primary-font">
+  <div class="container">
+
+	  <ion-label>Quanto você gostaria de aplicar?</ion-label>
+      <ion-item>
+        <ion-input [(ngModel)]="valor"
+                   type="number"
+                   placeholder="Digite o valor"
+                   clearInput clearOnEdit="false">
+        </ion-input>
+      </ion-item>
+
+	  <ion-label>Qual a data de vencimento do papel?</ion-label>
+      <ion-item>
+        <ion-input [(ngModel)]="data"
+                   type="date"
+                   placeholder=""
+                   clearInput clearOnEdit="false">
+        </ion-input>
+      </ion-item>
+
+	  <ion-label>Qual o percentual do CDI do papel?</ion-label>
+      <ion-item>
+        <ion-input [(ngModel)]="cdi"
+                   type="number"
+                   placeholder="Digite o percentual"
+                   clearInput clearOnEdit="false">
+        </ion-input>
+      </ion-item>
+
+    <button ion-button icon-left block outline color="light" class="button" (click)="simular()">Simular</button>
+
+  </div>
+
+
+
+</ion-content>
