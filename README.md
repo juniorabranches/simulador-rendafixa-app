@@ -6,7 +6,7 @@ App para simular a rentabilidade dos investimentos em renda fixa
 * https://easynvest.github.io/simulador-rendafixa/
 
 ## Tecnologias
-* React Native
+* Ionic 3
 
 ## Utilizando a API
 
