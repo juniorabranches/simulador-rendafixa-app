@@ -8,6 +8,11 @@ App para simular a rentabilidade dos investimentos em renda fixa
 ## Tecnologias
 * Ionic 3
 
+# To run:
+* > npm install
+* > ionic serve -l (with live reload)
+
+
 ## Utilizando a API
 
  - **URL**: https://easynvestsimulatorcalcapi.azurewebsites.net/calculator/simulate
