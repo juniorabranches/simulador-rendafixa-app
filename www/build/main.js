@@ -18,81 +18,27 @@ webpackEmptyAsyncContext.id = 107;
 /***/ }),
 
 /***/ 149:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-function webpackEmptyAsyncContext(req) {
-	// Here Promise.resolve().then() is used instead of new Promise() to prevent
-	// uncatched exception popping up in devtools
-	return Promise.resolve().then(function() {
-		throw new Error("Cannot find module '" + req + "'.");
+var map = {
+	"../pages/home/home.module": [
+		265,
+		2
+	]
+};
+function webpackAsyncContext(req) {
+	var ids = map[req];
+	if(!ids)
+		return Promise.reject(new Error("Cannot find module '" + req + "'."));
+	return __webpack_require__.e(ids[1]).then(function() {
+		return __webpack_require__(ids[0]);
 	});
-}
-webpackEmptyAsyncContext.keys = function() { return []; };
-webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
-module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 149;
-
-/***/ }),
-
-/***/ 194:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_api_api__ = __webpack_require__(196);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+webpackAsyncContext.keys = function webpackAsyncContextKeys() {
+	return Object.keys(map);
 };
-
-
-
-
-
-var HomePage = (function () {
-    function HomePage(navCtrl, api, loading) {
-        this.navCtrl = navCtrl;
-        this.api = api;
-        this.loading = loading;
-        this.valor = 1000;
-        this.cdi = 100;
-        this.data = '2017-12-31';
-    }
-    HomePage.prototype.simular = function (valor, data, cdi) {
-        var _this = this;
-        var loader = this.loading.create({
-            content: 'Simulando..'
-        });
-        loader.present();
-        this.api.simular(valor, cdi, data);
-        setTimeout(function () {
-            loader.dismiss();
-        }, 2000);
-        setTimeout(function () {
-            _this.valor = '';
-            _this.cdi = '';
-            _this.data = '';
-        }, 1000);
-    };
-    return HomePage;
-}());
-HomePage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"C:\Users\joao\Desktop\Simulador Renda Fixa\simulador-rendafixa-app\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title text-center>Renda Fixa</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content class="primary-font">\n  <div class="container">\n\n	  <ion-label>Quanto você gostaria de aplicar?</ion-label>\n      <ion-item>\n        <ion-input [(ngModel)]="valor"\n                   type="number"\n                   placeholder="Digite o valor"\n                   clearInput clearOnEdit="false">\n        </ion-input>\n      </ion-item>\n\n	  <ion-label>Qual a data de vencimento do papel?</ion-label>\n      <ion-item>\n        <ion-input [(ngModel)]="data"\n                   type="date"\n                   placeholder=""\n                   clearInput clearOnEdit="false">\n        </ion-input>\n      </ion-item>\n\n	  <ion-label>Qual o percentual do CDI do papel?</ion-label>\n      <ion-item>\n        <ion-input [(ngModel)]="cdi"\n                   type="number"\n                   placeholder="Digite o percentual"\n                   clearInput clearOnEdit="false">\n        </ion-input>\n      </ion-item>\n\n    <button ion-button icon-left block outline color="light" class="button" (click)="simular(valor, data, cdi)"><ion-icon name="logo-usd"></ion-icon>Simular</button>\n\n  </div>\n\n\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\joao\Desktop\Simulador Renda Fixa\simulador-rendafixa-app\src\pages\home\home.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_api_api__["a" /* ApiProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* LoadingController */]])
-], HomePage);
-
-//# sourceMappingURL=home.js.map
+webpackAsyncContext.id = 149;
+module.exports = webpackAsyncContext;
 
 /***/ }),
 
@@ -150,10 +96,9 @@ var ApiProvider = (function () {
 }());
 ApiProvider = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
 ], ApiProvider);
 
-var _a;
 //# sourceMappingURL=api.js.map
 
 /***/ }),
@@ -184,15 +129,13 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(264);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_api_api__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_api_api__ = __webpack_require__(196);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -209,26 +152,26 @@ var AppModule = (function () {
 AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
+            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {}, {
-                links: []
+                links: [
+                    { loadChildren: '../pages/home/home.module#HomeModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] }
+                ]
             }),
             __WEBPACK_IMPORTED_MODULE_5__angular_http__["c" /* HttpModule */]
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
         entryComponents: [
-            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
+            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */]
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
             __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
             { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] },
-            __WEBPACK_IMPORTED_MODULE_8__providers_api_api__["a" /* ApiProvider */]
+            __WEBPACK_IMPORTED_MODULE_7__providers_api_api__["a" /* ApiProvider */]
         ]
     })
 ], AppModule);
@@ -246,7 +189,6 @@ AppModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(194);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -260,10 +202,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var MyApp = (function () {
     function MyApp(platform, statusBar, splashScreen) {
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */];
+        this.rootPage = 'HomePage';
         platform.ready().then(function () {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
@@ -274,11 +215,12 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\Users\joao\Desktop\Simulador Renda Fixa\simulador-rendafixa-app\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"C:\Users\joao\Desktop\Simulador Renda Fixa\simulador-rendafixa-app\src\app\app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\Users\joao\Desktop\simulador-rendafixa-app\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\Users\joao\Desktop\simulador-rendafixa-app\src\app\app.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Platform */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _c || Object])
 ], MyApp);
 
+var _a, _b, _c;
 //# sourceMappingURL=app.component.js.map
 
 /***/ })
